@@ -14,3 +14,8 @@
 
 ### Figure 3 - Robot Embodiment Photo 2
 ![Figure 3 - Robot Embodiment Photo 2](./Robot_Embodiment_Photo_2.png)
+
+---
+
+### Figure 4 - Updated FSM
+![Figure 4 - Updated FSM](./Updated_FSM.png)
