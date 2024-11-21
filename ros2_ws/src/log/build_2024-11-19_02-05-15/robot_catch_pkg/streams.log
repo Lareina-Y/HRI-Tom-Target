@@ -1,0 +1,38 @@
+[3.464s] Invoking command in '/home/ubuntu/TomTarget/ros2_ws/src/robot_catch_pkg': PYTHONPATH=/home/ubuntu/TomTarget/ros2_ws/src/build/robot_catch_pkg/prefix_override:/home/ubuntu/TomTarget/ros2_ws/src/install/robot_catch_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/robot_catch_pkg build --build-base /home/ubuntu/TomTarget/ros2_ws/src/build/robot_catch_pkg/build install --record /home/ubuntu/TomTarget/ros2_ws/src/build/robot_catch_pkg/install.log --single-version-externally-managed
+[4.707s] running egg_info
+[4.717s] creating ../build/robot_catch_pkg/robot_catch_pkg.egg-info
+[4.718s] writing ../build/robot_catch_pkg/robot_catch_pkg.egg-info/PKG-INFO
+[4.719s] writing dependency_links to ../build/robot_catch_pkg/robot_catch_pkg.egg-info/dependency_links.txt
+[4.719s] writing entry points to ../build/robot_catch_pkg/robot_catch_pkg.egg-info/entry_points.txt
+[4.720s] writing requirements to ../build/robot_catch_pkg/robot_catch_pkg.egg-info/requires.txt
+[4.720s] writing top-level names to ../build/robot_catch_pkg/robot_catch_pkg.egg-info/top_level.txt
+[4.720s] writing manifest file '../build/robot_catch_pkg/robot_catch_pkg.egg-info/SOURCES.txt'
+[4.723s] reading manifest file '../build/robot_catch_pkg/robot_catch_pkg.egg-info/SOURCES.txt'
+[4.724s] adding license file 'LICENSE'
+[4.728s] writing manifest file '../build/robot_catch_pkg/robot_catch_pkg.egg-info/SOURCES.txt'
+[4.734s] running build
+[4.734s] running build_py
+[4.735s] creating /home/ubuntu/TomTarget/ros2_ws/src/build/robot_catch_pkg/build
+[4.739s] creating /home/ubuntu/TomTarget/ros2_ws/src/build/robot_catch_pkg/build/lib
+[4.740s] creating /home/ubuntu/TomTarget/ros2_ws/src/build/robot_catch_pkg/build/lib/robot_catch_pkg
+[4.740s] copying robot_catch_pkg/robot_catch_node.py -> /home/ubuntu/TomTarget/ros2_ws/src/build/robot_catch_pkg/build/lib/robot_catch_pkg
+[4.740s] copying robot_catch_pkg/__init__.py -> /home/ubuntu/TomTarget/ros2_ws/src/build/robot_catch_pkg/build/lib/robot_catch_pkg
+[4.741s] running install
+[4.741s] running install_lib
+[4.742s] creating /home/ubuntu/TomTarget/ros2_ws/src/install/robot_catch_pkg/lib/python3.10/site-packages/robot_catch_pkg
+[4.742s] copying /home/ubuntu/TomTarget/ros2_ws/src/build/robot_catch_pkg/build/lib/robot_catch_pkg/robot_catch_node.py -> /home/ubuntu/TomTarget/ros2_ws/src/install/robot_catch_pkg/lib/python3.10/site-packages/robot_catch_pkg
+[4.743s] copying /home/ubuntu/TomTarget/ros2_ws/src/build/robot_catch_pkg/build/lib/robot_catch_pkg/__init__.py -> /home/ubuntu/TomTarget/ros2_ws/src/install/robot_catch_pkg/lib/python3.10/site-packages/robot_catch_pkg
+[4.743s] byte-compiling /home/ubuntu/TomTarget/ros2_ws/src/install/robot_catch_pkg/lib/python3.10/site-packages/robot_catch_pkg/robot_catch_node.py to robot_catch_node.cpython-310.pyc
+[4.747s] byte-compiling /home/ubuntu/TomTarget/ros2_ws/src/install/robot_catch_pkg/lib/python3.10/site-packages/robot_catch_pkg/__init__.py to __init__.cpython-310.pyc
+[4.748s] running install_data
+[4.753s] creating /home/ubuntu/TomTarget/ros2_ws/src/install/robot_catch_pkg/share/ament_index
+[4.754s] creating /home/ubuntu/TomTarget/ros2_ws/src/install/robot_catch_pkg/share/ament_index/resource_index
+[4.754s] creating /home/ubuntu/TomTarget/ros2_ws/src/install/robot_catch_pkg/share/ament_index/resource_index/packages
+[4.755s] copying resource/robot_catch_pkg -> /home/ubuntu/TomTarget/ros2_ws/src/install/robot_catch_pkg/share/ament_index/resource_index/packages
+[4.755s] copying package.xml -> /home/ubuntu/TomTarget/ros2_ws/src/install/robot_catch_pkg/share/robot_catch_pkg
+[4.756s] running install_egg_info
+[4.769s] Copying ../build/robot_catch_pkg/robot_catch_pkg.egg-info to /home/ubuntu/TomTarget/ros2_ws/src/install/robot_catch_pkg/lib/python3.10/site-packages/robot_catch_pkg-0.0.0-py3.10.egg-info
+[4.770s] running install_scripts
+[4.850s] Installing robot_catch_node script to /home/ubuntu/TomTarget/ros2_ws/src/install/robot_catch_pkg/lib/robot_catch_pkg
+[4.853s] writing list of installed files to '/home/ubuntu/TomTarget/ros2_ws/src/build/robot_catch_pkg/install.log'
+[5.004s] Invoked command in '/home/ubuntu/TomTarget/ros2_ws/src/robot_catch_pkg' returned '0': PYTHONPATH=/home/ubuntu/TomTarget/ros2_ws/src/build/robot_catch_pkg/prefix_override:/home/ubuntu/TomTarget/ros2_ws/src/install/robot_catch_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/robot_catch_pkg build --build-base /home/ubuntu/TomTarget/ros2_ws/src/build/robot_catch_pkg/build install --record /home/ubuntu/TomTarget/ros2_ws/src/build/robot_catch_pkg/install.log --single-version-externally-managed

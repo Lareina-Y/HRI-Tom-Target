@@ -1,0 +1,5 @@
+  File "/home/ubuntu/TomTarget/ros2_ws/install/robot_catch_pkg/lib/python3.10/site-packages/robot_catch_pkg/robot_catch_node.py", line 111
+    self.get_logger().info('Rotate time: ': elapsed, self.ROTATE_TIME)
+                                          ^
+SyntaxError: invalid syntax
+

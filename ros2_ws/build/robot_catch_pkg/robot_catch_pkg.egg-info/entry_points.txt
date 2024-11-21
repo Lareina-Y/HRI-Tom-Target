@@ -1,0 +1,3 @@
+[console_scripts]
+robot_catch_node = robot_catch_pkg.robot_catch_node:main
+

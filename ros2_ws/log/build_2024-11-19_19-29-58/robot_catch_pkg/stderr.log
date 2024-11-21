@@ -1,0 +1,5 @@
+  File "/home/ubuntu/TomTarget/ros2_ws/install/robot_catch_pkg/lib/python3.10/site-packages/robot_catch_pkg/robot_catch_node.py", line 110
+    if elapsed >= Duration(seconds=self.ROTATE_TIME)
+                                                    ^
+SyntaxError: expected ':'
+
