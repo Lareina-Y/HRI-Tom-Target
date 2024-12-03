@@ -40,6 +40,7 @@ class RobotCatchGame(Node):
         self.SPEED_ANGULAR = 1.2
         self.WALK_TIME = 3
         self.TOTAL_ROUNDS = 2
+        self.ROTATE_180_TIME = 3.14159 / self.SPEED_ANGULAR  # time to rotate 180 degrees
         
         # Audio file path
         self.START_FILE = "/home/ubuntu/TomTarget/ros2_ws/src/audio/start.mp3"
@@ -163,13 +164,29 @@ class RobotCatchGame(Node):
 
         
         elif self.state == RobotState.BACK:
-            out_vel.linear.x = -self.SPEED_LINEAR
-            elapsed = self.get_clock().now() - self.state_ts
-            if elapsed >= Duration(seconds=self.WALK_TIME):
-                self.go_state(RobotState.ROTATE)
+            # Back has two phases:
+            # 1. Rotate 180 degrees -> back_phase = 'rotate'
+            # 2. Walk forward       -> back_phase = 'forward'
 
+            if not hasattr(self, 'back_phase'):
+                self.back_phase = 'rotate'
+            
+            # Rotate phase
+            if self.back_phase == 'rotate':
+                out_vel.angular.z = self.SPEED_ANGULAR
+                elapsed = self.get_clock().now() - self.state_ts
+                if elapsed >= Duration(seconds=self.ROTATE_180_TIME):
+                    self.back_phase = 'forward'
+                    self.state_ts = self.get_clock().now()
+            # Forward phase
+            else:
+                out_vel.linear.x = self.SPEED_LINEAR
+                elapsed = self.get_clock().now() - self.state_ts
+                if elapsed >= Duration(seconds=self.WALK_TIME):
+                    self.back_phase = 'rotate'
+                    self.go_state(RobotState.ROTATE)
 
-        elif self.state == RobotState.END: # Determin who wins
+        elif self.state == RobotState.END:
             return
 
         self.vel_pub.publish(out_vel)
