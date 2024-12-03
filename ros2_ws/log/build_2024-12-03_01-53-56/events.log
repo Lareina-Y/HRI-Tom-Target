@@ -1,0 +1,284 @@
+[0.000000] (-) TimerEvent: {}
+[0.012062] (robot_catch_pkg) JobQueued: {'identifier': 'robot_catch_pkg', 'dependencies': OrderedDict()}
+[0.012820] (robot_catch_pkg) JobStarted: {'identifier': 'robot_catch_pkg'}
+[0.089411] (-) TimerEvent: {}
+[0.193262] (-) TimerEvent: {}
+[0.300902] (-) TimerEvent: {}
+[0.403907] (-) TimerEvent: {}
+[0.511071] (-) TimerEvent: {}
+[0.613278] (-) TimerEvent: {}
+[0.715802] (-) TimerEvent: {}
+[0.819855] (-) TimerEvent: {}
+[0.924041] (-) TimerEvent: {}
+[1.036712] (-) TimerEvent: {}
+[1.138626] (-) TimerEvent: {}
+[1.240722] (-) TimerEvent: {}
+[1.343043] (-) TimerEvent: {}
+[1.452937] (-) TimerEvent: {}
+[1.555583] (-) TimerEvent: {}
+[1.668030] (-) TimerEvent: {}
+[1.772971] (-) TimerEvent: {}
+[1.878926] (-) TimerEvent: {}
+[1.981740] (-) TimerEvent: {}
+[2.088449] (-) TimerEvent: {}
+[2.194046] (-) TimerEvent: {}
+[2.301622] (-) TimerEvent: {}
+[2.404680] (-) TimerEvent: {}
+[2.507054] (-) TimerEvent: {}
+[2.609714] (-) TimerEvent: {}
+[2.712829] (-) TimerEvent: {}
+[2.813992] (-) TimerEvent: {}
+[2.914999] (-) TimerEvent: {}
+[3.015895] (-) TimerEvent: {}
+[3.117085] (-) TimerEvent: {}
+[3.222579] (-) TimerEvent: {}
+[3.325345] (-) TimerEvent: {}
+[3.428445] (-) TimerEvent: {}
+[3.532525] (-) TimerEvent: {}
+[3.635377] (-) TimerEvent: {}
+[3.737525] (-) TimerEvent: {}
+[3.846596] (-) TimerEvent: {}
+[3.950405] (-) TimerEvent: {}
+[4.054636] (-) TimerEvent: {}
+[4.164229] (-) TimerEvent: {}
+[4.266568] (-) TimerEvent: {}
+[4.369263] (-) TimerEvent: {}
+[4.472603] (-) TimerEvent: {}
+[4.587912] (-) TimerEvent: {}
+[4.692200] (-) TimerEvent: {}
+[4.794889] (-) TimerEvent: {}
+[4.900384] (-) TimerEvent: {}
+[5.001452] (-) TimerEvent: {}
+[5.105151] (-) TimerEvent: {}
+[5.209395] (-) TimerEvent: {}
+[5.313474] (-) TimerEvent: {}
+[5.417057] (-) TimerEvent: {}
+[5.524474] (-) TimerEvent: {}
+[5.626835] (-) TimerEvent: {}
+[5.731992] (-) TimerEvent: {}
+[5.835563] (-) TimerEvent: {}
+[5.938798] (-) TimerEvent: {}
+[6.080508] (-) TimerEvent: {}
+[6.200082] (-) TimerEvent: {}
+[6.303169] (-) TimerEvent: {}
+[6.411797] (-) TimerEvent: {}
+[6.515959] (-) TimerEvent: {}
+[6.618037] (-) TimerEvent: {}
+[6.732849] (-) TimerEvent: {}
+[6.839936] (-) TimerEvent: {}
+[6.942578] (-) TimerEvent: {}
+[7.044166] (-) TimerEvent: {}
+[7.151492] (-) TimerEvent: {}
+[7.254029] (-) TimerEvent: {}
+[7.363936] (-) TimerEvent: {}
+[7.466426] (-) TimerEvent: {}
+[7.568485] (-) TimerEvent: {}
+[7.672007] (-) TimerEvent: {}
+[7.776362] (-) TimerEvent: {}
+[7.880282] (-) TimerEvent: {}
+[7.982747] (-) TimerEvent: {}
+[8.085045] (-) TimerEvent: {}
+[8.188995] (-) TimerEvent: {}
+[8.296848] (-) TimerEvent: {}
+[8.401381] (-) TimerEvent: {}
+[8.504024] (-) TimerEvent: {}
+[8.607181] (-) TimerEvent: {}
+[8.712103] (-) TimerEvent: {}
+[8.814772] (-) TimerEvent: {}
+[8.917755] (-) TimerEvent: {}
+[9.025272] (-) TimerEvent: {}
+[9.126885] (-) TimerEvent: {}
+[9.240092] (-) TimerEvent: {}
+[9.343042] (-) TimerEvent: {}
+[9.445312] (-) TimerEvent: {}
+[9.547116] (-) TimerEvent: {}
+[9.650391] (-) TimerEvent: {}
+[9.752140] (-) TimerEvent: {}
+[9.859916] (-) TimerEvent: {}
+[9.962208] (-) TimerEvent: {}
+[10.064886] (-) TimerEvent: {}
+[10.167174] (-) TimerEvent: {}
+[10.269068] (-) TimerEvent: {}
+[10.376602] (-) TimerEvent: {}
+[10.479129] (-) TimerEvent: {}
+[10.582203] (-) TimerEvent: {}
+[10.686132] (-) TimerEvent: {}
+[10.788944] (-) TimerEvent: {}
+[10.889871] (-) TimerEvent: {}
+[10.991057] (-) TimerEvent: {}
+[11.098980] (-) TimerEvent: {}
+[11.200009] (-) TimerEvent: {}
+[11.302918] (-) TimerEvent: {}
+[11.407335] (-) TimerEvent: {}
+[11.516975] (-) TimerEvent: {}
+[11.619531] (-) TimerEvent: {}
+[11.723620] (-) TimerEvent: {}
+[11.848013] (-) TimerEvent: {}
+[11.949165] (-) TimerEvent: {}
+[12.051555] (-) TimerEvent: {}
+[12.153890] (-) TimerEvent: {}
+[12.257233] (-) TimerEvent: {}
+[12.359972] (-) TimerEvent: {}
+[12.480300] (-) TimerEvent: {}
+[12.587890] (-) TimerEvent: {}
+[12.692131] (-) TimerEvent: {}
+[12.793002] (-) TimerEvent: {}
+[12.894188] (-) TimerEvent: {}
+[12.995315] (-) TimerEvent: {}
+[13.097997] (-) TimerEvent: {}
+[13.201349] (-) TimerEvent: {}
+[13.307852] (-) TimerEvent: {}
+[13.416742] (-) TimerEvent: {}
+[13.521280] (-) TimerEvent: {}
+[13.631944] (-) TimerEvent: {}
+[13.759918] (-) TimerEvent: {}
+[13.863242] (-) TimerEvent: {}
+[13.965712] (-) TimerEvent: {}
+[14.069081] (-) TimerEvent: {}
+[14.172330] (-) TimerEvent: {}
+[14.274764] (-) TimerEvent: {}
+[14.385712] (-) TimerEvent: {}
+[14.488375] (-) TimerEvent: {}
+[14.590906] (-) TimerEvent: {}
+[14.693527] (-) TimerEvent: {}
+[14.795964] (-) TimerEvent: {}
+[14.900358] (-) TimerEvent: {}
+[15.015912] (-) TimerEvent: {}
+[15.119282] (-) TimerEvent: {}
+[15.222229] (-) TimerEvent: {}
+[15.327870] (-) TimerEvent: {}
+[15.429646] (-) TimerEvent: {}
+[15.532976] (-) TimerEvent: {}
+[15.640395] (-) TimerEvent: {}
+[15.743488] (-) TimerEvent: {}
+[15.852003] (-) TimerEvent: {}
+[15.945952] (robot_catch_pkg) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/robot_catch_pkg', 'build', '--build-base', '/home/ubuntu/HRI-Tom-Target/ros2_ws/build/robot_catch_pkg/build', 'install', '--record', '/home/ubuntu/HRI-Tom-Target/ros2_ws/build/robot_catch_pkg/install.log', '--single-version-externally-managed'], 'cwd': '/home/ubuntu/HRI-Tom-Target/ros2_ws/src/robot_catch_pkg', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'WORKSPACE_SETUP': '/opt/ros/humble/setup.bash', 'USER': 'ubuntu', 'SSH_CLIENT': '128.84.91.50 59808 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/ubuntu', 'CYCLONEDDS_URI': '/etc/turtlebot4/cyclonedds_rpi.xml', 'OLDPWD': '/home/ubuntu/HRI-Tom-Target', 'SSH_TTY': '/dev/pts/2', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/ubuntu/HRI-Tom-Target/ros2_ws/install:/home/ubuntu/ros2_ws/install', 'ROBOT_SETUP': '/etc/turtlebot4/setup.bash', 'ROS_DISTRO': 'humble', 'LOGNAME': 'ubuntu', 'IGN_GAZEBO_MODEL_PATH': '/opt/ros/humble/share', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'ROS_SUPER_CLIENT': 'True', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '4', 'GAZEBO_MODEL_PATH': '/opt/ros/humble/share', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/ubuntu/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'FASTRTPS_DEFAULT_PROFILES_FILE': '/etc/turtlebot4/fastdds_discovery_super_client.xml', 'TURTLEBOT4_DIAGNOSTICS': '1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'C.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/home/ubuntu/HRI-Tom-Target/ros2_ws/install/robot_catch_pkg:/home/ubuntu/ros2_ws/install/robot_control_architecture_pkg:/opt/ros/humble', 'SHELL': '/bin/bash', 'ROS_DISCOVERY_SERVER': '10.52.16.28:11811;', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'IGN_GAZEBO_RESOURCE_PATH': '/opt/ros/humble/share', 'GAZEBO_RESOURCE_PATH': '/opt/ros/humble/share', 'ROBOT_NAMESPACE': '', 'PWD': '/home/ubuntu/HRI-Tom-Target/ros2_ws/build/robot_catch_pkg', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '128.84.91.50 59808 10.52.16.28 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ubuntu/HRI-Tom-Target/ros2_ws/build/robot_catch_pkg/prefix_override:/home/ubuntu/HRI-Tom-Target/ros2_ws/install/robot_catch_pkg/lib/python3.10/site-packages:/home/ubuntu/HRI-Tom-Target/ros2_ws/install/robot_catch_pkg/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/install/robot_control_architecture_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[15.954280] (-) TimerEvent: {}
+[16.058782] (-) TimerEvent: {}
+[16.163034] (-) TimerEvent: {}
+[16.265099] (-) TimerEvent: {}
+[16.367219] (-) TimerEvent: {}
+[16.472653] (-) TimerEvent: {}
+[16.573793] (-) TimerEvent: {}
+[16.676874] (-) TimerEvent: {}
+[16.781667] (-) TimerEvent: {}
+[16.884378] (-) TimerEvent: {}
+[16.987140] (-) TimerEvent: {}
+[17.101562] (-) TimerEvent: {}
+[17.213696] (-) TimerEvent: {}
+[17.316728] (-) TimerEvent: {}
+[17.417700] (-) TimerEvent: {}
+[17.522874] (-) TimerEvent: {}
+[17.624083] (-) TimerEvent: {}
+[17.739599] (-) TimerEvent: {}
+[17.848452] (-) TimerEvent: {}
+[17.949518] (-) TimerEvent: {}
+[18.051468] (-) TimerEvent: {}
+[18.153880] (-) TimerEvent: {}
+[18.256456] (-) TimerEvent: {}
+[18.363033] (-) TimerEvent: {}
+[18.466712] (-) TimerEvent: {}
+[18.573008] (-) TimerEvent: {}
+[18.676030] (-) TimerEvent: {}
+[18.783901] (-) TimerEvent: {}
+[18.891942] (-) TimerEvent: {}
+[18.994843] (-) TimerEvent: {}
+[19.097134] (-) TimerEvent: {}
+[19.199194] (-) TimerEvent: {}
+[19.302194] (-) TimerEvent: {}
+[19.419923] (-) TimerEvent: {}
+[19.522223] (-) TimerEvent: {}
+[19.626345] (-) TimerEvent: {}
+[19.734202] (-) TimerEvent: {}
+[19.837303] (-) TimerEvent: {}
+[19.947976] (-) TimerEvent: {}
+[20.067968] (-) TimerEvent: {}
+[20.171287] (-) TimerEvent: {}
+[20.274951] (-) TimerEvent: {}
+[20.377462] (-) TimerEvent: {}
+[20.481170] (-) TimerEvent: {}
+[20.596440] (-) TimerEvent: {}
+[20.719248] (-) TimerEvent: {}
+[20.821811] (-) TimerEvent: {}
+[20.924348] (-) TimerEvent: {}
+[21.027109] (-) TimerEvent: {}
+[21.131850] (-) TimerEvent: {}
+[21.234848] (-) TimerEvent: {}
+[21.335902] (-) TimerEvent: {}
+[21.452620] (-) TimerEvent: {}
+[21.555072] (-) TimerEvent: {}
+[21.657376] (-) TimerEvent: {}
+[21.762895] (-) TimerEvent: {}
+[21.865561] (-) TimerEvent: {}
+[21.979461] (-) TimerEvent: {}
+[22.084852] (-) TimerEvent: {}
+[22.187905] (-) TimerEvent: {}
+[22.294026] (-) TimerEvent: {}
+[22.397656] (-) TimerEvent: {}
+[22.501256] (-) TimerEvent: {}
+[22.603883] (-) TimerEvent: {}
+[22.674045] (robot_catch_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[22.704210] (-) TimerEvent: {}
+[22.752279] (robot_catch_pkg) StdoutLine: {'line': b'writing ../../build/robot_catch_pkg/robot_catch_pkg.egg-info/PKG-INFO\n'}
+[22.775501] (robot_catch_pkg) StdoutLine: {'line': b'writing dependency_links to ../../build/robot_catch_pkg/robot_catch_pkg.egg-info/dependency_links.txt\n'}
+[22.792927] (robot_catch_pkg) StdoutLine: {'line': b'writing entry points to ../../build/robot_catch_pkg/robot_catch_pkg.egg-info/entry_points.txt\n'}
+[22.804545] (-) TimerEvent: {}
+[22.825241] (robot_catch_pkg) StdoutLine: {'line': b'writing requirements to ../../build/robot_catch_pkg/robot_catch_pkg.egg-info/requires.txt\n'}
+[22.833234] (robot_catch_pkg) StdoutLine: {'line': b'writing top-level names to ../../build/robot_catch_pkg/robot_catch_pkg.egg-info/top_level.txt\n'}
+[22.904817] (-) TimerEvent: {}
+[22.922580] (robot_catch_pkg) StdoutLine: {'line': b"reading manifest file '../../build/robot_catch_pkg/robot_catch_pkg.egg-info/SOURCES.txt'\n"}
+[22.938625] (robot_catch_pkg) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[23.006839] (-) TimerEvent: {}
+[23.021135] (robot_catch_pkg) StdoutLine: {'line': b"writing manifest file '../../build/robot_catch_pkg/robot_catch_pkg.egg-info/SOURCES.txt'\n"}
+[23.022672] (robot_catch_pkg) StdoutLine: {'line': b'running build\n'}
+[23.023438] (robot_catch_pkg) StdoutLine: {'line': b'running build_py\n'}
+[23.026520] (robot_catch_pkg) StdoutLine: {'line': b'copying robot_catch_pkg/robot_catch_node.py -> /home/ubuntu/HRI-Tom-Target/ros2_ws/build/robot_catch_pkg/build/lib/robot_catch_pkg\n'}
+[23.028386] (robot_catch_pkg) StdoutLine: {'line': b'running install\n'}
+[23.033738] (robot_catch_pkg) StdoutLine: {'line': b'running install_lib\n'}
+[23.047217] (robot_catch_pkg) StdoutLine: {'line': b'copying /home/ubuntu/HRI-Tom-Target/ros2_ws/build/robot_catch_pkg/build/lib/robot_catch_pkg/robot_catch_node.py -> /home/ubuntu/HRI-Tom-Target/ros2_ws/install/robot_catch_pkg/lib/python3.10/site-packages/robot_catch_pkg\n'}
+[23.057399] (robot_catch_pkg) StdoutLine: {'line': b'byte-compiling /home/ubuntu/HRI-Tom-Target/ros2_ws/install/robot_catch_pkg/lib/python3.10/site-packages/robot_catch_pkg/robot_catch_node.py to robot_catch_node.cpython-310.pyc\n'}
+[23.066401] (robot_catch_pkg) StdoutLine: {'line': b'running install_data\n'}
+[23.071091] (robot_catch_pkg) StdoutLine: {'line': b'running install_egg_info\n'}
+[23.086017] (robot_catch_pkg) StdoutLine: {'line': b"removing '/home/ubuntu/HRI-Tom-Target/ros2_ws/install/robot_catch_pkg/lib/python3.10/site-packages/robot_catch_pkg-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[23.088387] (robot_catch_pkg) StdoutLine: {'line': b'Copying ../../build/robot_catch_pkg/robot_catch_pkg.egg-info to /home/ubuntu/HRI-Tom-Target/ros2_ws/install/robot_catch_pkg/lib/python3.10/site-packages/robot_catch_pkg-0.0.0-py3.10.egg-info\n'}
+[23.103582] (robot_catch_pkg) StdoutLine: {'line': b'running install_scripts\n'}
+[23.108450] (-) TimerEvent: {}
+[23.212441] (-) TimerEvent: {}
+[23.276785] (robot_catch_pkg) StdoutLine: {'line': b'Installing robot_catch_node script to /home/ubuntu/HRI-Tom-Target/ros2_ws/install/robot_catch_pkg/lib/robot_catch_pkg\n'}
+[23.282666] (robot_catch_pkg) StdoutLine: {'line': b"writing list of installed files to '/home/ubuntu/HRI-Tom-Target/ros2_ws/build/robot_catch_pkg/install.log'\n"}
+[23.312642] (-) TimerEvent: {}
+[23.415026] (-) TimerEvent: {}
+[23.517984] (-) TimerEvent: {}
+[23.619037] (-) TimerEvent: {}
+[23.723293] (-) TimerEvent: {}
+[23.832691] (-) TimerEvent: {}
+[23.941163] (-) TimerEvent: {}
+[24.044586] (-) TimerEvent: {}
+[24.148065] (-) TimerEvent: {}
+[24.250116] (-) TimerEvent: {}
+[24.352485] (-) TimerEvent: {}
+[24.455928] (-) TimerEvent: {}
+[24.562171] (-) TimerEvent: {}
+[24.664528] (-) TimerEvent: {}
+[24.768305] (-) TimerEvent: {}
+[24.871293] (-) TimerEvent: {}
+[24.974602] (-) TimerEvent: {}
+[25.103956] (-) TimerEvent: {}
+[25.227254] (-) TimerEvent: {}
+[25.331638] (-) TimerEvent: {}
+[25.434300] (-) TimerEvent: {}
+[25.536967] (-) TimerEvent: {}
+[25.652370] (-) TimerEvent: {}
+[25.753973] (-) TimerEvent: {}
+[25.785157] (robot_catch_pkg) CommandEnded: {'returncode': 0}
+[25.861321] (-) TimerEvent: {}
+[25.980122] (-) TimerEvent: {}
+[26.081621] (-) TimerEvent: {}
+[26.182833] (-) TimerEvent: {}
+[26.285067] (-) TimerEvent: {}
+[26.392212] (-) TimerEvent: {}
+[26.493149] (-) TimerEvent: {}
+[26.615168] (-) TimerEvent: {}
+[26.717246] (-) TimerEvent: {}
+[26.807327] (robot_catch_pkg) JobEnded: {'identifier': 'robot_catch_pkg', 'rc': 0}
+[26.817556] (-) EventReactorShutdown: {}
