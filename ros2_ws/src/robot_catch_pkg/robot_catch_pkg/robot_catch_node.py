@@ -8,7 +8,6 @@ from sensor_msgs.msg import Image
 from vision_msgs.msg import Detection2DArray
 from cv_bridge import CvBridge
 import random
-from gtts import gTTS
 import subprocess
 import os
 import cv2
@@ -32,14 +31,14 @@ class RobotCatchGame(Node):
         self.state_ts = self.get_clock().now()
         self.round_count = 0
         self.new_round = True
-        self.rotate_time = 10 # random number for each round (5-15)
+        self.rotate_time = 10 # random number for each round (10-20)
         self.music_process = None
 
         # Robot parameters
         self.SPEED_LINEAR = 0.2
         self.SPEED_ANGULAR = 1.0
         self.WALK_TIME = 3.0
-        self.TOTAL_ROUNDS = 3
+        self.TOTAL_ROUNDS = 5
         self.ROTATE_180_TIME = 3.1415926 / self.SPEED_ANGULAR  # time to rotate 180 degrees
         
         # Audio file path
@@ -48,6 +47,8 @@ class RobotCatchGame(Node):
         self.CATCH_FILE = "/home/ubuntu/HRI-Tom-Target/ros2_ws/src/audio/catch.mp3"
         self.MAGIC_FILE = "/home/ubuntu/HRI-Tom-Target/ros2_ws/src/audio/magic.mp3"
         self.FAIL_FILE = "/home/ubuntu/HRI-Tom-Target/ros2_ws/src/audio/fail.mp3"
+        self.LAST_ROUND_FILE = "/home/ubuntu/HRI-Tom-Target/ros2_ws/src/audio/last-round.mp3"
+        self.END_FILE = "/home/ubuntu/HRI-Tom-Target/ros2_ws/src/audio/end.mp3"
 
         # Sensor data storage
         self.last_rgb_image = None
@@ -110,21 +111,21 @@ class RobotCatchGame(Node):
         out_vel = Twist()
 
         if self.state == RobotState.START:
-            # if self.last_rgb_image is not None:
-            self.go_state(RobotState.ROTATE)
+            if self.last_rgb_image is not None:
+                self.go_state(RobotState.ROTATE)
 
 
         elif self.state == RobotState.ROTATE:
-            # if self.round_count == self.TOTAL_ROUNDS: 
-            #     self.go_state(RobotState.END)
-
             # Assign a random rotation duration to each round
             if self.new_round:
-                if self.round_count == self.TOTAL_ROUNDS: 
+                if self.round_count == self.TOTAL_ROUNDS:
                     self.go_state(RobotState.END)
                 else:
+                    if self.round_count == self.TOTAL_ROUNDS - 1: # Last round
+                        self.play_audio(self.LAST_ROUND_FILE)
+
                     self.play_audio(self.START_FILE)
-                    self.rotate_time = random.randint(5, 15)
+                    self.rotate_time = random.randint(10, 20)
                     self.round_count += 1
                     self.new_round = False
                     self.play_music()
@@ -156,8 +157,8 @@ class RobotCatchGame(Node):
         elif self.state == RobotState.STOP:
             self.stop_music()
 
-            # if self.detected_persons:
-            if True: # TODO: for test purpose only
+            if self.detected_persons:
+            # if True: # for test purpose only
                 self.play_audio(self.MAGIC_FILE)
                 self.go_state(RobotState.APPROACH)
             else:
@@ -192,6 +193,7 @@ class RobotCatchGame(Node):
                     
 
         elif self.state == RobotState.END:
+            self.play_audio(self.END_FILE)
             return
 
         self.vel_pub.publish(out_vel)
