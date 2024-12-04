@@ -1,0 +1,102 @@
+[0.000000] (-) TimerEvent: {}
+[0.004197] (robot_catch_pkg) JobQueued: {'identifier': 'robot_catch_pkg', 'dependencies': OrderedDict()}
+[0.005608] (robot_catch_pkg) JobStarted: {'identifier': 'robot_catch_pkg'}
+[0.101019] (-) TimerEvent: {}
+[0.203151] (-) TimerEvent: {}
+[0.305301] (-) TimerEvent: {}
+[0.407411] (-) TimerEvent: {}
+[0.509386] (-) TimerEvent: {}
+[0.610198] (-) TimerEvent: {}
+[0.712249] (-) TimerEvent: {}
+[0.814596] (-) TimerEvent: {}
+[0.917341] (-) TimerEvent: {}
+[1.020938] (-) TimerEvent: {}
+[1.122985] (-) TimerEvent: {}
+[1.223782] (-) TimerEvent: {}
+[1.326236] (-) TimerEvent: {}
+[1.427021] (-) TimerEvent: {}
+[1.527875] (-) TimerEvent: {}
+[1.628655] (-) TimerEvent: {}
+[1.729453] (-) TimerEvent: {}
+[1.830381] (-) TimerEvent: {}
+[1.932059] (-) TimerEvent: {}
+[2.034167] (-) TimerEvent: {}
+[2.135911] (-) TimerEvent: {}
+[2.238691] (-) TimerEvent: {}
+[2.345406] (-) TimerEvent: {}
+[2.447333] (-) TimerEvent: {}
+[2.548298] (-) TimerEvent: {}
+[2.649163] (-) TimerEvent: {}
+[2.750223] (-) TimerEvent: {}
+[2.851121] (-) TimerEvent: {}
+[2.954014] (-) TimerEvent: {}
+[3.054951] (-) TimerEvent: {}
+[3.156013] (-) TimerEvent: {}
+[3.256858] (-) TimerEvent: {}
+[3.358414] (-) TimerEvent: {}
+[3.460125] (-) TimerEvent: {}
+[3.560941] (-) TimerEvent: {}
+[3.662272] (-) TimerEvent: {}
+[3.763087] (-) TimerEvent: {}
+[3.864204] (-) TimerEvent: {}
+[3.966472] (-) TimerEvent: {}
+[4.067359] (-) TimerEvent: {}
+[4.168344] (-) TimerEvent: {}
+[4.269255] (-) TimerEvent: {}
+[4.370651] (-) TimerEvent: {}
+[4.473330] (-) TimerEvent: {}
+[4.574863] (-) TimerEvent: {}
+[4.675849] (-) TimerEvent: {}
+[4.777882] (-) TimerEvent: {}
+[4.849980] (robot_catch_pkg) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/robot_catch_pkg', 'build', '--build-base', '/home/ubuntu/HRI-Tom-Target/ros2_ws/build/robot_catch_pkg/build', 'install', '--record', '/home/ubuntu/HRI-Tom-Target/ros2_ws/build/robot_catch_pkg/install.log', '--single-version-externally-managed'], 'cwd': '/home/ubuntu/HRI-Tom-Target/ros2_ws/src/robot_catch_pkg', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'WORKSPACE_SETUP': '/opt/ros/humble/setup.bash', 'USER': 'ubuntu', 'SSH_CLIENT': '128.84.91.72 51300 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/ubuntu', 'CYCLONEDDS_URI': '/etc/turtlebot4/cyclonedds_rpi.xml', 'OLDPWD': '/home/ubuntu/HRI-Tom-Target/ros2_ws/src', 'SSH_TTY': '/dev/pts/16', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/ubuntu/HRI-Tom-Target/ros2_ws/install', 'ROBOT_SETUP': '/etc/turtlebot4/setup.bash', 'ROS_DISTRO': 'humble', 'LOGNAME': 'ubuntu', 'IGN_GAZEBO_MODEL_PATH': '/opt/ros/humble/share', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'ROS_SUPER_CLIENT': 'True', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '13', 'GAZEBO_MODEL_PATH': '/opt/ros/humble/share', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/ubuntu/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'FASTRTPS_DEFAULT_PROFILES_FILE': '/etc/turtlebot4/fastdds_discovery_super_client.xml', 'TURTLEBOT4_DIAGNOSTICS': '1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': 'localhost:14.0', 'LANG': 'C.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/home/ubuntu/HRI-Tom-Target/ros2_ws/install/robot_catch_pkg:/opt/ros/humble', 'SHELL': '/bin/bash', 'ROS_DISCOVERY_SERVER': '10.52.16.28:11811;', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'IGN_GAZEBO_RESOURCE_PATH': '/opt/ros/humble/share', 'GAZEBO_RESOURCE_PATH': '/opt/ros/humble/share', 'ROBOT_NAMESPACE': '', 'PWD': '/home/ubuntu/HRI-Tom-Target/ros2_ws/build/robot_catch_pkg', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '128.84.91.72 51300 10.52.16.28 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ubuntu/HRI-Tom-Target/ros2_ws/build/robot_catch_pkg/prefix_override:/home/ubuntu/HRI-Tom-Target/ros2_ws/install/robot_catch_pkg/lib/python3.10/site-packages:/home/ubuntu/HRI-Tom-Target/ros2_ws/install/robot_catch_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[4.878140] (-) TimerEvent: {}
+[4.979602] (-) TimerEvent: {}
+[5.081114] (-) TimerEvent: {}
+[5.183654] (-) TimerEvent: {}
+[5.285598] (-) TimerEvent: {}
+[5.388794] (-) TimerEvent: {}
+[5.490387] (-) TimerEvent: {}
+[5.591817] (-) TimerEvent: {}
+[5.692615] (-) TimerEvent: {}
+[5.793957] (-) TimerEvent: {}
+[5.895185] (-) TimerEvent: {}
+[5.996625] (-) TimerEvent: {}
+[6.097874] (-) TimerEvent: {}
+[6.198613] (-) TimerEvent: {}
+[6.299934] (-) TimerEvent: {}
+[6.400753] (-) TimerEvent: {}
+[6.501547] (-) TimerEvent: {}
+[6.602340] (-) TimerEvent: {}
+[6.703112] (-) TimerEvent: {}
+[6.783696] (robot_catch_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[6.787472] (robot_catch_pkg) StdoutLine: {'line': b'writing ../../build/robot_catch_pkg/robot_catch_pkg.egg-info/PKG-INFO\n'}
+[6.789203] (robot_catch_pkg) StdoutLine: {'line': b'writing dependency_links to ../../build/robot_catch_pkg/robot_catch_pkg.egg-info/dependency_links.txt\n'}
+[6.790485] (robot_catch_pkg) StdoutLine: {'line': b'writing entry points to ../../build/robot_catch_pkg/robot_catch_pkg.egg-info/entry_points.txt\n'}
+[6.791563] (robot_catch_pkg) StdoutLine: {'line': b'writing requirements to ../../build/robot_catch_pkg/robot_catch_pkg.egg-info/requires.txt\n'}
+[6.793887] (robot_catch_pkg) StdoutLine: {'line': b'writing top-level names to ../../build/robot_catch_pkg/robot_catch_pkg.egg-info/top_level.txt\n'}
+[6.808700] (-) TimerEvent: {}
+[6.817008] (robot_catch_pkg) StdoutLine: {'line': b"reading manifest file '../../build/robot_catch_pkg/robot_catch_pkg.egg-info/SOURCES.txt'\n"}
+[6.819488] (robot_catch_pkg) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[6.822525] (robot_catch_pkg) StdoutLine: {'line': b"writing manifest file '../../build/robot_catch_pkg/robot_catch_pkg.egg-info/SOURCES.txt'\n"}
+[6.824758] (robot_catch_pkg) StdoutLine: {'line': b'running build\n'}
+[6.826045] (robot_catch_pkg) StdoutLine: {'line': b'running build_py\n'}
+[6.831091] (robot_catch_pkg) StdoutLine: {'line': b'copying robot_catch_pkg/robot_catch_node.py -> /home/ubuntu/HRI-Tom-Target/ros2_ws/build/robot_catch_pkg/build/lib/robot_catch_pkg\n'}
+[6.836733] (robot_catch_pkg) StdoutLine: {'line': b'running install\n'}
+[6.842722] (robot_catch_pkg) StdoutLine: {'line': b'running install_lib\n'}
+[6.850108] (robot_catch_pkg) StdoutLine: {'line': b'copying /home/ubuntu/HRI-Tom-Target/ros2_ws/build/robot_catch_pkg/build/lib/robot_catch_pkg/robot_catch_node.py -> /home/ubuntu/HRI-Tom-Target/ros2_ws/install/robot_catch_pkg/lib/python3.10/site-packages/robot_catch_pkg\n'}
+[6.853291] (robot_catch_pkg) StdoutLine: {'line': b'byte-compiling /home/ubuntu/HRI-Tom-Target/ros2_ws/install/robot_catch_pkg/lib/python3.10/site-packages/robot_catch_pkg/robot_catch_node.py to robot_catch_node.cpython-310.pyc\n'}
+[6.865325] (robot_catch_pkg) StdoutLine: {'line': b'running install_data\n'}
+[6.868251] (robot_catch_pkg) StdoutLine: {'line': b'running install_egg_info\n'}
+[6.883249] (robot_catch_pkg) StdoutLine: {'line': b"removing '/home/ubuntu/HRI-Tom-Target/ros2_ws/install/robot_catch_pkg/lib/python3.10/site-packages/robot_catch_pkg-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[6.887151] (robot_catch_pkg) StdoutLine: {'line': b'Copying ../../build/robot_catch_pkg/robot_catch_pkg.egg-info to /home/ubuntu/HRI-Tom-Target/ros2_ws/install/robot_catch_pkg/lib/python3.10/site-packages/robot_catch_pkg-0.0.0-py3.10.egg-info\n'}
+[6.898304] (robot_catch_pkg) StdoutLine: {'line': b'running install_scripts\n'}
+[6.911334] (-) TimerEvent: {}
+[7.013906] (-) TimerEvent: {}
+[7.022000] (robot_catch_pkg) StdoutLine: {'line': b'Installing robot_catch_node script to /home/ubuntu/HRI-Tom-Target/ros2_ws/install/robot_catch_pkg/lib/robot_catch_pkg\n'}
+[7.023997] (robot_catch_pkg) StdoutLine: {'line': b"writing list of installed files to '/home/ubuntu/HRI-Tom-Target/ros2_ws/build/robot_catch_pkg/install.log'\n"}
+[7.117950] (-) TimerEvent: {}
+[7.219888] (-) TimerEvent: {}
+[7.265761] (robot_catch_pkg) CommandEnded: {'returncode': 0}
+[7.320186] (-) TimerEvent: {}
+[7.392198] (robot_catch_pkg) JobEnded: {'identifier': 'robot_catch_pkg', 'rc': 0}
+[7.395808] (-) EventReactorShutdown: {}

@@ -32,25 +32,31 @@ class RobotCatchGame(Node):
         self.state_ts = self.get_clock().now()
         self.round_count = 0
         self.new_round = True
-        self.rotate_time = 10 # random number for each round (10-20)
+        self.rotate_time = 12 # random number for each round (12-22)
         self.music_process = None
+        self.catch_audio_count = 0  # Counter for catch audio plays
+        self.stop_audio_played = False
+        self.music_ts = self.get_clock().now()
 
         # Robot parameters
         self.SPEED_LINEAR = 0.2
-        self.SPEED_ANGULAR = 0.5
+        self.SPEED_ANGULAR = 0.4
         self.WALK_TIME = 3.0
         self.TOTAL_ROUNDS = 5
         self.ROTATE_180_TIME = 3.1415926 / self.SPEED_ANGULAR  # time to rotate 180 degrees
-        self.CENTER_TOLERANCE = 20  # pixels
-        self.STOP_TIME = 1.0
-        
+        self.CENTER_TOLERANCE = 5  # pixels
+        self.CHEAT_TIME = 13.0  # Minimum rotation time for last two rounds
+        self.STOP_TIME = 0.1
+
         # Audio file path
         self.INTRO_FILE = "/home/ubuntu/HRI-Tom-Target/ros2_ws/src/audio/intro.mp3"
         self.START_FILE = "/home/ubuntu/HRI-Tom-Target/ros2_ws/src/audio/start.mp3"
         self.MUSIC_FILE = "/home/ubuntu/HRI-Tom-Target/ros2_ws/src/audio/tom_jerry.mp3"
         self.CATCH_FILE = "/home/ubuntu/HRI-Tom-Target/ros2_ws/src/audio/catch.mp3"
+        self.STOP_FILE = "/home/ubuntu/HRI-Tom-Target/ros2_ws/src/audio/stop.mp3"
         self.MAGIC_FILE = "/home/ubuntu/HRI-Tom-Target/ros2_ws/src/audio/magic.mp3"
         self.FAIL_FILE = "/home/ubuntu/HRI-Tom-Target/ros2_ws/src/audio/fail.mp3"
+        self.FAIL_VOICE_FILE = "/home/ubuntu/HRI-Tom-Target/ros2_ws/src/audio/fail-voice.mp3"
         self.LAST_ROUND_FILE = "/home/ubuntu/HRI-Tom-Target/ros2_ws/src/audio/last-round.mp3"
         self.END_FILE = "/home/ubuntu/HRI-Tom-Target/ros2_ws/src/audio/end.mp3"
 
@@ -149,20 +155,28 @@ class RobotCatchGame(Node):
                         self.play_audio(self.LAST_ROUND_FILE)
 
                     self.play_audio(self.START_FILE)
-                    self.rotate_time = random.randint(10, 20)
+                    self.rotate_time = random.randint(12, 22)
+                    
                     self.round_count += 1
                     self.new_round = False
                     self.play_music()
 
             out_vel.angular.z = self.SPEED_ANGULAR
             
-            elapsed = self.get_clock().now() - self.state_ts
-            if elapsed >= Duration(seconds=self.rotate_time):
-                self.get_logger().info(
-                    f"Rotate time: {elapsed.nanoseconds / 1e9:.2f} / {self.rotate_time}, Detect: {self.detected_persons}"
-                )
-                self.go_state(RobotState.STOP)
-                
+            elapsed = self.get_clock().now() - self.music_ts
+
+            # Random stop
+            if self.round_count < self.TOTAL_ROUNDS - 1:
+                if elapsed >= Duration(seconds=self.rotate_time):
+                    self.get_logger().info(
+                        f"Rotate time: {elapsed.nanoseconds / 1e9:.2f} / {self.rotate_time}, Detect: {self.detected_persons}"
+                    )
+                    self.go_state(RobotState.STOP)
+            else: # Cheat mode
+                if elapsed >= Duration(seconds=self.CHEAT_TIME) and self.detected_persons:
+                    self.get_logger().info(f"Cheat activated! Person detected after {elapsed.nanoseconds / 1e9:.2f} seconds")
+                    self.go_state(RobotState.STOP)
+
 
         elif self.state == RobotState.APPROACH:
             out_vel.linear.x = self.SPEED_LINEAR
@@ -172,41 +186,52 @@ class RobotCatchGame(Node):
 
 
         elif self.state == RobotState.CATCH:
-            self.play_audio(self.CATCH_FILE)
-
-            if not self.detected_persons:
+            if self.detected_persons and self.catch_audio_count < 3:
+                self.play_audio(self.CATCH_FILE)
+                self.catch_audio_count += 1
+            else:
+                self.catch_audio_count = 0
                 self.go_state(RobotState.BACK)
 
 
         elif self.state == RobotState.STOP:
-            self.stop_music()
-
+            if not self.stop_audio_played:
+                self.stop_music()
+                self.play_audio(self.STOP_FILE)
+                self.stop_audio_played = True
+                
             elapsed = self.get_clock().now() - self.state_ts
             if elapsed >= Duration(seconds=self.STOP_TIME):
+                self.stop_audio_played = False  # Reset flag for next time
                 if self.detected_persons:
-                # if True: # for test purpose only
                     self.play_audio(self.MAGIC_FILE)
                     self.go_state(RobotState.ADJUST)
                 else:
                     self.play_audio(self.FAIL_FILE)
+                    self.play_audio(self.FAIL_VOICE_FILE)
                     self.new_round = True
                     self.go_state(RobotState.ROTATE)
 
 
         elif self.state == RobotState.ADJUST:
+            elapsed = self.get_clock().now() - self.state_ts
+
             if self.detected_persons:
                 catched_person = self.detected_persons[0]
 
-            if abs(catched_person["center_x"] - self.image_center_x) < self.CENTER_TOLERANCE:
-                self.catched_person = None
-                self.go_state(RobotState.APPROACH)
+                if abs(catched_person["center_x"] - self.image_center_x) < self.CENTER_TOLERANCE:
+                    self.catched_person = None
+                    self.go_state(RobotState.APPROACH)
+                else:
+                    if catched_person["center_x"] < self.image_center_x: # Turn left
+                        self.get_logger().info("Robot Turn Left ...")
+                        out_vel.angular.z = self.SPEED_ANGULAR
+                    else: # Turn right
+                        self.get_logger().info("Robot Turn Right ...")
+                        out_vel.angular.z = -self.SPEED_ANGULAR
             else:
-                if catched_person["center_x"] < self.image_center_x: # Turn left
-                    self.get_logger().info("Robot Turn Left ...")
-                    out_vel.angular.z = self.SPEED_ANGULAR
-                else: # Turn right
-                    self.get_logger().info("Robot Turn Right ...")
-                    out_vel.angular.z = -self.SPEED_ANGULAR
+                out_vel.angular.z = -self.SPEED_ANGULAR
+                self.get_logger().info("Robot Turn Right ... to find the detected person")
 
 
         elif self.state == RobotState.BACK:
@@ -251,6 +276,7 @@ class RobotCatchGame(Node):
         if self.music_process is None:
             try:
                 self.music_process = subprocess.Popen(['mpg123', '-q', '-o', 'alsa', '-a', 'hw:1,0', self.MUSIC_FILE])
+                self.music_ts = self.get_clock().now()
                 self.get_logger().info("Playing music.")
             except Exception as e:
                 self.get_logger().error(f"Music playback failed: {e}")
