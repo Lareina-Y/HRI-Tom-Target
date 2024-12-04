@@ -8,7 +8,6 @@ from sensor_msgs.msg import Image
 from vision_msgs.msg import Detection2DArray
 from cv_bridge import CvBridge
 import random
-from gtts import gTTS
 import subprocess
 import os
 import cv2
@@ -17,6 +16,7 @@ class RobotState:
     START = 'START'
     ROTATE = 'ROTATE'
     STOP = 'STOP'
+    ADJUST = 'ADJUST'
     APPROACH = 'APPROACH'
     CATCH = 'CATCH'
     BACK = 'BACK'
@@ -32,17 +32,20 @@ class RobotCatchGame(Node):
         self.state_ts = self.get_clock().now()
         self.round_count = 0
         self.new_round = True
-        self.rotate_time = 10 # random number for each round (5-15)
+        self.rotate_time = 10 # random number for each round (10-20)
         self.music_process = None
 
         # Robot parameters
         self.SPEED_LINEAR = 0.2
-        self.SPEED_ANGULAR = 1.0
+        self.SPEED_ANGULAR = 0.5
         self.WALK_TIME = 3.0
         self.TOTAL_ROUNDS = 5
         self.ROTATE_180_TIME = 3.1415926 / self.SPEED_ANGULAR  # time to rotate 180 degrees
+        self.CENTER_TOLERANCE = 20  # pixels
+        self.STOP_TIME = 1.0
         
         # Audio file path
+        self.INTRO_FILE = "/home/ubuntu/HRI-Tom-Target/ros2_ws/src/audio/intro.mp3"
         self.START_FILE = "/home/ubuntu/HRI-Tom-Target/ros2_ws/src/audio/start.mp3"
         self.MUSIC_FILE = "/home/ubuntu/HRI-Tom-Target/ros2_ws/src/audio/tom_jerry.mp3"
         self.CATCH_FILE = "/home/ubuntu/HRI-Tom-Target/ros2_ws/src/audio/catch.mp3"
@@ -82,6 +85,25 @@ class RobotCatchGame(Node):
         self.last_rgb_image = self.br.imgmsg_to_cv2(msg, desired_encoding='bgr8')
         self.image_center_x = self.last_rgb_image.shape[1] // 2
 
+        # Visualize detections
+        for person in self.detected_persons:
+            # Draw bounding box
+            cv2.rectangle(self.last_rgb_image, 
+                        (person["top_left"][0], person["top_left"][1]), 
+                        (person["bottom_right"][0], person["bottom_right"][1]), 
+                        (0, 255, 0), 2)  # Green color, thickness=2
+            
+            # Add text label
+            label = "Person"
+            cv2.putText(self.last_rgb_image, 
+                       label,
+                       (person["top_left"][0], person["top_left"][1] - 10),  # Position above box
+                       cv2.FONT_HERSHEY_SIMPLEX, 
+                       0.5,  # Font scale
+                       (0, 255, 0),  # Green color
+                       2)  # Thickness
+
+
     def person_detection_callback(self, msg):
         """Process person detections using YOLO"""
 
@@ -113,20 +135,21 @@ class RobotCatchGame(Node):
 
         if self.state == RobotState.START:
             if self.last_rgb_image is not None:
+                self.play_audio(self.INTRO_FILE)
                 self.go_state(RobotState.ROTATE)
 
 
         elif self.state == RobotState.ROTATE:
             # Assign a random rotation duration to each round
             if self.new_round:
-                if self.round_count == self.TOTAL_ROUNDS: 
+                if self.round_count == self.TOTAL_ROUNDS:
                     self.go_state(RobotState.END)
                 else:
-                    if self.round_count == self.TOTAL_ROUNDS - 1:
+                    if self.round_count == self.TOTAL_ROUNDS - 1: # Last round
                         self.play_audio(self.LAST_ROUND_FILE)
 
                     self.play_audio(self.START_FILE)
-                    self.rotate_time = random.randint(5, 15)
+                    self.rotate_time = random.randint(10, 20)
                     self.round_count += 1
                     self.new_round = False
                     self.play_music()
@@ -158,16 +181,34 @@ class RobotCatchGame(Node):
         elif self.state == RobotState.STOP:
             self.stop_music()
 
+            elapsed = self.get_clock().now() - self.state_ts
+            if elapsed >= Duration(seconds=self.STOP_TIME):
+                if self.detected_persons:
+                # if True: # for test purpose only
+                    self.play_audio(self.MAGIC_FILE)
+                    self.go_state(RobotState.ADJUST)
+                else:
+                    self.play_audio(self.FAIL_FILE)
+                    self.new_round = True
+                    self.go_state(RobotState.ROTATE)
+
+
+        elif self.state == RobotState.ADJUST:
             if self.detected_persons:
-            # if True: # TODO: for test purpose only
-                self.play_audio(self.MAGIC_FILE)
+                catched_person = self.detected_persons[0]
+
+            if abs(catched_person["center_x"] - self.image_center_x) < self.CENTER_TOLERANCE:
+                self.catched_person = None
                 self.go_state(RobotState.APPROACH)
             else:
-                self.play_audio(self.FAIL_FILE)
-                self.new_round = True
-                self.go_state(RobotState.ROTATE)
+                if catched_person["center_x"] < self.image_center_x: # Turn left
+                    self.get_logger().info("Robot Turn Left ...")
+                    out_vel.angular.z = self.SPEED_ANGULAR
+                else: # Turn right
+                    self.get_logger().info("Robot Turn Right ...")
+                    out_vel.angular.z = -self.SPEED_ANGULAR
 
-        
+
         elif self.state == RobotState.BACK:
             # Back has two phases:
             # 1. Rotate 180 degrees -> back_phase = 'rotate'
@@ -195,6 +236,9 @@ class RobotCatchGame(Node):
 
         elif self.state == RobotState.END:
             self.play_audio(self.END_FILE)
+            self.get_logger().info("Robot Catch Game has ended.")
+            self.destroy_node()       # Destroy the node
+            rclpy.shutdown()          # Shut down the ROS 2 system
             return
 
         self.vel_pub.publish(out_vel)
@@ -230,10 +274,14 @@ def main(args=None):
 
     robot_catch_node = RobotCatchGame()
 
-    rclpy.spin(robot_catch_node)
-
-    robot_catch_node.destroy_node()
-    rclpy.shutdown()
+    try:
+        rclpy.spin(robot_catch_node)
+    except KeyboardInterrupt:
+        pass  # Allow clean exit with Ctrl+C
+    finally:
+        if rclpy.ok():
+            robot_catch_node.destroy_node()
+            rclpy.shutdown()
 
 if __name__ == '__main__':
     main()

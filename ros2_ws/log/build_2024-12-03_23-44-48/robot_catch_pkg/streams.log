@@ -1,0 +1,26 @@
+[4.713s] Invoking command in '/home/ubuntu/HRI-Tom-Target/ros2_ws/src/robot_catch_pkg': PYTHONPATH=/home/ubuntu/HRI-Tom-Target/ros2_ws/build/robot_catch_pkg/prefix_override:/home/ubuntu/HRI-Tom-Target/ros2_ws/install/robot_catch_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/robot_catch_pkg build --build-base /home/ubuntu/HRI-Tom-Target/ros2_ws/build/robot_catch_pkg/build install --record /home/ubuntu/HRI-Tom-Target/ros2_ws/build/robot_catch_pkg/install.log --single-version-externally-managed
+[7.968s] running egg_info
+[7.971s] writing ../../build/robot_catch_pkg/robot_catch_pkg.egg-info/PKG-INFO
+[7.977s] writing dependency_links to ../../build/robot_catch_pkg/robot_catch_pkg.egg-info/dependency_links.txt
+[7.978s] writing entry points to ../../build/robot_catch_pkg/robot_catch_pkg.egg-info/entry_points.txt
+[7.979s] writing requirements to ../../build/robot_catch_pkg/robot_catch_pkg.egg-info/requires.txt
+[7.979s] writing top-level names to ../../build/robot_catch_pkg/robot_catch_pkg.egg-info/top_level.txt
+[7.989s] reading manifest file '../../build/robot_catch_pkg/robot_catch_pkg.egg-info/SOURCES.txt'
+[7.991s] adding license file 'LICENSE'
+[7.995s] writing manifest file '../../build/robot_catch_pkg/robot_catch_pkg.egg-info/SOURCES.txt'
+[7.995s] running build
+[7.996s] running build_py
+[7.997s] copying robot_catch_pkg/robot_catch_node.py -> /home/ubuntu/HRI-Tom-Target/ros2_ws/build/robot_catch_pkg/build/lib/robot_catch_pkg
+[7.998s] running install
+[7.998s] running install_lib
+[8.003s] copying /home/ubuntu/HRI-Tom-Target/ros2_ws/build/robot_catch_pkg/build/lib/robot_catch_pkg/robot_catch_node.py -> /home/ubuntu/HRI-Tom-Target/ros2_ws/install/robot_catch_pkg/lib/python3.10/site-packages/robot_catch_pkg
+[8.006s] byte-compiling /home/ubuntu/HRI-Tom-Target/ros2_ws/install/robot_catch_pkg/lib/python3.10/site-packages/robot_catch_pkg/robot_catch_node.py to robot_catch_node.cpython-310.pyc
+[8.023s] Sorry: IndentationError: expected an indented block after function definition on line 88 (robot_catch_node.py, line 89)
+[8.026s] running install_data
+[8.027s] running install_egg_info
+[8.030s] removing '/home/ubuntu/HRI-Tom-Target/ros2_ws/install/robot_catch_pkg/lib/python3.10/site-packages/robot_catch_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[8.030s] Copying ../../build/robot_catch_pkg/robot_catch_pkg.egg-info to /home/ubuntu/HRI-Tom-Target/ros2_ws/install/robot_catch_pkg/lib/python3.10/site-packages/robot_catch_pkg-0.0.0-py3.10.egg-info
+[8.040s] running install_scripts
+[8.145s] Installing robot_catch_node script to /home/ubuntu/HRI-Tom-Target/ros2_ws/install/robot_catch_pkg/lib/robot_catch_pkg
+[8.146s] writing list of installed files to '/home/ubuntu/HRI-Tom-Target/ros2_ws/build/robot_catch_pkg/install.log'
+[8.364s] Invoked command in '/home/ubuntu/HRI-Tom-Target/ros2_ws/src/robot_catch_pkg' returned '0': PYTHONPATH=/home/ubuntu/HRI-Tom-Target/ros2_ws/build/robot_catch_pkg/prefix_override:/home/ubuntu/HRI-Tom-Target/ros2_ws/install/robot_catch_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/robot_catch_pkg build --build-base /home/ubuntu/HRI-Tom-Target/ros2_ws/build/robot_catch_pkg/build install --record /home/ubuntu/HRI-Tom-Target/ros2_ws/build/robot_catch_pkg/install.log --single-version-externally-managed
