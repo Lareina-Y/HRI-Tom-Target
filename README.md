@@ -1,4 +1,4 @@
-# Human-Robot Interaction Final Project Mid-point Check-in
+# Human-Robot Interaction Final Project
 
 ## Appendix
 
